@@ -3,4 +3,4 @@ src/config/deefy.db.ini
 /vendor/
 .DS_Store
 .vscode/
-.idea/
+.idea/audio/ 
