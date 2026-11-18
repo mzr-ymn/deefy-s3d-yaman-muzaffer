@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace iutnc\deefy\dispatch;
 
-use iutnc\deefy\action\Action;
-
 class Dispatcher {
     private ?string $action = null;
     private array $routes = [];
@@ -51,10 +49,11 @@ class Dispatcher {
                 <h1>Deefy App</h1>
             </header>
             <nav>
-                <a href="?action=default">Accueil</a>
-                <a href="?action=add-user">Inscription</a>
+                <a href="?action=default">Accueil (Playlists)</a>
                 <a href="?action=add-playlist">Créer Playlist</a>
-                <a href="?action=playlist">Afficher Playlist</a>
+                <a href="?action=playlist">Playlist Courante</a>
+                <a href="?action=add-track">Ajouter une Piste</a>
+                <a href="?action=add-user">Inscription</a>
             </nav>
             <main>
                 {$html}

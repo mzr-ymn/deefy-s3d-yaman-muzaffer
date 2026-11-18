@@ -7,6 +7,7 @@ use iutnc\deefy\exception\InvalidPropertyNameException;
 use iutnc\deefy\exception\InvalidPropertyValueException;
 
 abstract class AudioTrack {
+    protected ?int $id = null;
     protected string $titre;
     protected string $fichierAudio;
     protected ?string $genre = null;
@@ -22,6 +23,10 @@ abstract class AudioTrack {
             return $this->$property;
         }
         throw new InvalidPropertyNameException("invalid property: {$property}");
+    }
+
+    public function setId(int $id): void {
+        $this->id = $id;
     }
 
     public function setGenre(string $genre): void {

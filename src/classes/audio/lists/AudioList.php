@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace iutnc\deefy\audio\lists;
 
-use iutnc\deefy\audio\tracks\AudioTrack;
 use iutnc\deefy\exception\InvalidPropertyNameException;
 
 class AudioList {
+    protected ?int $id = null;
     protected string $nom;
     protected int $nbPistes = 0;
     protected int $dureeTotale = 0;
@@ -20,6 +20,10 @@ class AudioList {
         foreach ($pistes as $piste) {
             $this->dureeTotale += (int)$piste->duree;
         }
+    }
+
+    public function setId(int $id): void {
+        $this->id = $id;
     }
 
     public function __get(string $property): mixed {
