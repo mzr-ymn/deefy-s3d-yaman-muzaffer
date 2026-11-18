@@ -53,7 +53,6 @@ class Dispatcher {
                 <a href="?action=add-playlist">Créer Playlist</a>
                 <a href="?action=playlist">Playlist Courante</a>
                 <a href="?action=add-track">Ajouter une Piste</a>
-                <a href="?action=add-user">Inscription</a>
             </nav>
             <main>
                 {$html}
