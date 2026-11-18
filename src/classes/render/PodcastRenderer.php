@@ -10,7 +10,7 @@ class PodcastRenderer extends AudioTrackRenderer {
         $p = $this->track;
         return "<div class=\"podcast-compact\">
     <span>Podcast : {$p->titre} (par {$p->auteur})</span>
-    <audio controls src=\"{$p->fichierAudio}\"></audio>
+    <audio controls src=\"audio/{$p->fichierAudio}\"></audio>
 </div>";
     }
 
@@ -21,7 +21,7 @@ class PodcastRenderer extends AudioTrackRenderer {
     <p>Auteur : {$p->auteur}</p>
     <p>Date : {$p->date}</p>
     <p>Genre : {$p->genre} | Durée : {$p->duree} s</p>
-    <audio controls src=\"{$p->fichierAudio}\"></audio>
+    <audio controls src=\"audio/{$p->fichierAudio}\"></audio>
 </div>";
     }
 }

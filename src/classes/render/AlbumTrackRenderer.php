@@ -10,7 +10,7 @@ class AlbumTrackRenderer extends AudioTrackRenderer {
         $t = $this->track;
         return "<div class=\"track-compact\">
     <span>{$t->numero}. {$t->titre} - {$t->artiste}</span>
-    <audio controls src=\"{$t->fichierAudio}\"></audio>
+    <audio controls src=\"audio/{$t->fichierAudio}\"></audio>
 </div>";
     }
 
@@ -21,7 +21,7 @@ class AlbumTrackRenderer extends AudioTrackRenderer {
     <p>Artiste : {$t->artiste}</p>
     <p>Album : {$t->album} ({$t->annee})</p>
     <p>Genre : {$t->genre} | Durée : {$t->duree} s</p>
-    <audio controls src=\"{$t->fichierAudio}\"></audio>
+    <audio controls src=\"audio/{$t->fichierAudio}\"></audio>
 </div>";
     }
 }
